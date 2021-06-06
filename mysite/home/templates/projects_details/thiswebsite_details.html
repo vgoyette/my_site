@@ -4,26 +4,37 @@
 <main>
   <h1 class="contact-us">This Website</h1>
 
-  <div class="columns">
-    <div>
-      <h2 class="grid-header">Assignment</h2>
-      <p class="grid-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus nulla neque necessitatibus, eum tempore impedit consectetur quo. Rem itaque dignissimos quas. Maiores corporis fugit soluta!</p>
-    </div>
-
-    <div>
-      <img class="column-image" src="{% static 'img/bg.jpg' %}">
-    </div>
+  <div class="anchor-container">
+        <a href="#assignment" class="anchor-link">Assignment</a>
+        <a href="#technology" class="anchor-link">Technology</a>
+        <a href="#results" class="anchor-link">Results</a>
   </div>
 
   <hr>
 
+  <a id="assignment"></a>
   <div class="columns">
-    <div>
-      <h2 class="grid-header">Technology</h2>
-      <p class="grid-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae eveniet ea fugiat, explicabo atque reiciendis eum laborum, corrupti odio maxime adipisci, quidem cupiditate nobis dicta.</p>
+    <div class="col">
+      <img class="column-image" src="{% static 'img/bg.jpg' %}">
     </div>
 
-    <div>
+    <div class="col">
+      <h2 class="grid-header">Assignment</h2>
+      <p class="grid-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure quisquam similique. Sequi quos recusandae quod nulla dolore ipsa totam, distinctio, ullam eaque aliquid nam et nesciunt repudiandae sit temporibus praesentium! Distinctio saepe voluptates commodi exercitationem vero, harum ipsa corrupti quasi quo maxime obcaecati rerum nesciunt explicabo magni accusantium eaque, repudiandae nam sint enim omnis iure delectus soluta, quisquam consectetur. Pariatur, dolor molestias reprehenderit inventore, repellendus velit ea ut vitae blanditiis totam nostrum atque dolorem vel distinctio sit quis dignissimos deleniti, ipsum quae aperiam beatae consequatur quisquam. Autem animi corporis sunt cum atque ab repudiandae suscipit necessitatibus aliquid, consequatur obcaecati.</p>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <a id="technology"></a>
+  <div class="columns">
+    <div class="col">
+      <h2 class="grid-header">Technology</h2>
+      <p class="grid-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente pariatur expedita saepe quos deserunt perspiciatis voluptatum aliquid explicabo blanditiis sit, eveniet deleniti autem consequatur vel odit, ipsa modi laborum? Dignissimos distinctio placeat dolore, natus sint maxime dolores fugiat! Dolores praesentium, iure quam provident doloremque qui hic accusamus sequi omnis maiores quaerat repellat dolor ratione ad illo, ab cupiditate. Obcaecati ducimus sunt ea consequuntur iusto tenetur maxime error neque deleniti similique at unde corrupti libero est sequi aperiam nesciunt id quo ipsum explicabo eos cum, mollitia voluptates! Quisquam voluptatem dignissimos perferendis odit fuga corrupti sed consequatur magni aut accusamus. Accusamus, eius.</p>
+    </div>
+
+    <div class="col">
       <div class="logo-row">
         <a href="https://www.python.org" class="svg-logo">
           <svg
@@ -210,6 +221,18 @@
 
   <hr>
 
-  
+  <a id="results"></a>
+  <div class="columns">
+    <div class="col">
+      <img class="column-image" src="{% static 'img/bg.jpg' %}">
+    </div>
+
+    <div class="col">
+      <h2 class="grid-header">Results</h2>
+      <p class="grid-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iure quisquam similique. Sequi quos recusandae quod nulla dolore ipsa totam, distinctio, ullam eaque aliquid nam et nesciunt repudiandae sit temporibus praesentium! Distinctio saepe voluptates commodi exercitationem vero, harum ipsa corrupti quasi quo maxime obcaecati rerum nesciunt explicabo magni accusantium eaque, repudiandae nam sint enim omnis iure delectus soluta, quisquam consectetur. Pariatur, dolor molestias reprehenderit inventore, repellendus velit ea ut vitae blanditiis totam nostrum atque dolorem vel distinctio sit quis dignissimos deleniti, ipsum quae aperiam beatae consequatur quisquam. Autem animi corporis sunt cum atque ab repudiandae suscipit necessitatibus aliquid, consequatur obcaecati.</p>
+    </div>
+  </div>
+
+  <hr>
 </main>
 {% endblock %}

@@ -19,6 +19,7 @@ h1{
 
 hr{
     color: rgb(255 255 255 / 0.8);
+    width: 90%;
 }
 
 .columns{
@@ -26,7 +27,12 @@ hr{
     width: min(90%, 75rem);
     display: grid;
     grid-auto-flow: column;
+    align-items: center;
     gap: 1em;
+}
+
+.col{
+    height: 100%;
 }
 
 @media (max-width: 55em){
@@ -43,16 +49,19 @@ hr{
   background: linear-gradient(rgb(255 255 255 / 0.8), var(--ice-blue), #23232e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
+  text-align: center;
 }
 
 .grid-body{
     color: #b4b2b2;
+    text-align: center;
 }
 
 .column-image{
-    width: 200px;
-    height: 200px;
+    width: 436px;
+    height: 357px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .anchor-container{
@@ -61,6 +70,13 @@ hr{
     flex-direction: row;
     align-content: center;
     justify-content: center;
+}
+
+@media (max-width: 55em){
+    .anchor-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 .anchor-link{
