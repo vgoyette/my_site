@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% load widget_tweaks %}
+
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}
+Contact Me
+{% endblock %}
+
+{% block main %}
+<main>
+    <h1 class="contact-us">Contact Me</h1>
+    <form method="post">
+      {% csrf_token %}
+      <div id="form-container">
+        <span class="input">
+          {% render_field form.email class="input__field" id="input-3" %}
+          <label for="input-3" class="input__label">
+            <span class="input__label-content">Email Address</span>
+          </label>
+        </span>
+      
+        <span class="input">
+          {% render_field form.subject class="input__field" id="input-4" %}
+          <!--<input type="text" class="input__field" id="input-4" />-->
+          <label for="input-4" class="input__label">
+            <span class="input__label-content">Subject</span>
+          </label>
+        </span>
+      
+        <span class="input message">
+          {% render_field form.message class="input__field" id="input-5" %}
+          <!--<textarea class="input__field" id="input-5"></textarea>-->
+          <label for="input-5" class="input__label">
+            <span class="input__label-content">Message</span>
+          </label>
+        </span>
+    
+      <button id="send-button" type="submit">Send</button>    
+      </div>
+    </form>
+</main>
+{% endblock %}
+
+{% block script %}
+<script id="rendered-js">
+  var $input;
+
+  function onInputFocus(event) {
+    var $target = $(event.target);
+    var $parent = $target.parent();
+    $parent.addClass('input--filled');
+  };
+
+  function onInputBlur(event) {
+    var $target = $(event.target);
+    var $parent = $target.parent();
+
+    if (event.target.value.trim() === '') {
+      $parent.removeClass('input--filled');
+    }
+  };
+
+  $(document).ready(function() {
+    $input = $('.input__field');
+  
+    // in case there is any value already
+    $input.each(function(){
+      if ($input.val().trim() !== '') {
+        var $parent = $input.parent();
+        $parent.addClass('input--filled');
+      }
+    });
+  
+    $input.on('focus', onInputFocus);
+    $input.on('blur', onInputBlur);
+  });
+</script>
+{% endblock %}

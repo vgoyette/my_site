@@ -1,0 +1,27 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/details.css' %}" />
+{% endblock %} 
+
+{% block title %} 
+  Safar
+{% endblock %} 
+
+{% block main %}
+<main>
+<h1 class="contact-us">Safar</h1>
+    <div class="anchor-container">
+        <a href="#assignment" class="anchor-link">Assignment</a>
+        <a href="#technology" class="anchor-link">Technology</a>
+        <a href="#results" class="anchor-link">Results</a>
+    </div>
+
+    <div class="detail-section"><a id="assignment"></a></div>
+    <div class="detail-section"><a id="technology"></a></div>
+    <div class="detail-section"><a id="results"></a></div>
+
+</main>
+{% endblock %}

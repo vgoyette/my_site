@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block title %}
+Thanks!
+{% endblock %}
+
+{% block main %}
+<main>
+    <h1>Thanks for getting into contact with me!</h1>
+    <p>I'll make sure to reach out to you soon</p>
+
+    <p>You will be redirected in 5 seconds. If you are not, click <a href="{% url 'index' %}" style="text-decoration: none; color: rgb(77, 154, 255);">here</a> to return to the hompage.</p>
+    <meta http-equiv="refresh" content="5;url={% url 'index' %}" />
+</main>
+{% endblock %}

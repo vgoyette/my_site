@@ -1,0 +1,11 @@
+:root{
+    --light-text-white: rgb(255 255 255 / 0.8);
+    --ice-blue: rgb(77, 154, 255);
+}
+
+h1{
+    color: var(--ice-blue);
+    text-align: center;
+    font-size: 5rem;
+    font-family: sans-serif;
+}

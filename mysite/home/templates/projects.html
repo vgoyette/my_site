@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/projects.css' %}" />
+{% endblock %} 
+
+{% block title %} 
+  My Projects
+{% endblock %} 
+
+{% block main %}
+<main>
+<h1 class="contact-us">My Projects</h1>
+<div class="card-container">
+  <div class="card">
+    <div class="card-content">
+      <h2 class="card-title">Safar</h2>
+      <p class="card-body">
+        A road trip mapping and planning website built for Software Development Principles.
+      </p>
+      <a href="{% url 'safar_details' %}" class="button">Learn More</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h2 class="card-title">Irish Cribs</h2>
+      <p class="card-body">
+        An off-campus housing website specifically designed for Notre Dame students.
+      </p>
+      <a href="{% url 'irishcribs_details' %}" class="button">Learn More</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <h2 class="card-title">This Website</h2>
+      <p class="card-body">
+        My first major foray into visual design (not great) and more involved HTML and CSS (getting better).
+      </p>
+      <a href="{% url 'thiswebsite_details' %}" class="button">Learn More</a>
+    </div>
+  </div>
+
+</div>
+</main>
+{% endblock %}
