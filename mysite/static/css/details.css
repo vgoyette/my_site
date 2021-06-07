@@ -62,6 +62,9 @@ hr{
     height: 357px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: -10px -10px 0px #ccc;
+  -webkit-box-shadow: -10px -10px 0px #ccc;
+  -moz-box-shadow: -10px -10px 0px #ccc;
 }
 
 .anchor-container{
@@ -110,6 +113,21 @@ hr{
   
 .tech-logo:hover {
     filter: grayscale(0%) opacity(1);
+}
+
+.tech-logo-map{
+    filter: grayscale(100%) opacity(0.7);
+    transition: 600ms ease;
+    width: 10rem;
+    height: 10rem;
+}
+
+.tech-logo-map:hover{
+    filter: grayscale(0%) opacity(1);
+}
+
+.tech-logo-map > * {
+    fill: rgb(255 255 255 / 0.8);
 }
 
 .logo-row{
